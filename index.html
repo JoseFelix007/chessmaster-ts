@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chess</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <div id="chessboard" class="board"></div>
+    </div>
+    <div class="right">
+      <div id="chessmarker" class="chessmarker">
+        <div class="player white">
+          <p>Jugador de Blancas</p>
+          <input type="text" name="player-white" id="player-white">
+        </div>
+        <div class="player black">
+          <p>Jugador de Negras</p>
+          <input type="text" name="player-black" id="player-black">
+        </div>
+      </div>
+      <div id="chessmessages" class="chessmessages">
+        <div id="messages">
+          <p></p>
+        </div>
+        <div id="actions">
+          <button id="start-game">Iniciar</button>
+          <button id="reset-game">Reiniciar</button>
+        </div>
+      </div>
+      <div id="chesslog" class="chesschat"></div>
+    </div>
+  </div>
+  <script src="dist/index.js" type="module"></script>
+</body>
+
+</html>

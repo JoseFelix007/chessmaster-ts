@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  width: 80vw;
+  height: 100vh;
+  margin: auto;
+}
+.left {
+  height: 80%;
+}
+.right {
+  height: 80%;
+  width: 25%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chessmarker {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  gap: 1rem;
+}
+
+.chessmarker .player {
+  width: 49%;
+  border: 2px solid rgb(1, 1, 50, 50%);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.chessmarker .player.white {
+  color: rgb(49, 49, 121);
+}
+.chessmarker .player.black {
+  color: rgb(196, 196, 240);
+}
+
+.chessmarker .player input {
+  width: 100%;
+}
+
+.chessmessages {
+  height: 5rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  gap: 0.5rem;
+}
+
+.chessmessages p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(49, 49, 121);
+  margin: 0.rem;
+}
+
+.chessmessages .alert {
+  font-size: 1rem;
+  color:rgb(187, 74, 74);
+}
+
+.chesschat {
+  width: 100%;
+  flex-grow: 1;
+  background:rgb(196, 196, 240);
+  border: 2px solid rgb(1, 1, 50, 50%);
+  border-radius: 0.2rem;
+  padding: 1rem;
+}
+
+.chesschat p {
+  color: rgb(49, 49, 121);
+  line-height: 1.5;
+}
+
+.chesschat .turn {
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgb(88, 88, 133);
+
+  display: flex;
+  flex-direction: row;
+}
+.chesschat .turn:before, .chesschat .turn:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+.chesschat .turn:before {
+  margin-right: 0.5rem;
+}
+.chesschat .turn:after {
+  margin-left: 0.5rem;
+}
+.chesschat .check {
+  color: rgb(194, 121, 121);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  aspect-ratio: 1/1;
+  height: 100%;
+  border: 2px solid rgb(1, 1, 50, 50%);
+  margin: auto;
+}
+
+.square {
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(243, 243, 243);
+}
+
+.square.highlight {
+  box-shadow: inset 0 0 3px 3px #fa0;
+}
+
+.square.valid-move{
+  position: relative;
+}
+.square.valid-move:after {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  content:"";
+  width:50%;
+  height:50%;
+  border-radius:50px;
+  box-shadow: 0 0 8px #fa0, inset 0 0 8px #fa0;
+}
+
+.white {
+  background-color:rgb(196, 196, 240);
+}
+
+.black {
+  background-color:rgb(49, 49, 121);
+}
+
+.piece {
+  cursor: grab;
+  height: 80%;
+  aspect-ratio: 1/1;
+  color: rgb(82, 82, 107);
+}
+
+.hidden {
+  display: none;
+}
